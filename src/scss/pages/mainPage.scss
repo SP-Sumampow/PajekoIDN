@@ -70,7 +70,25 @@
 
   &__orders {
     height: 50vh;
-    background-color: thistle;
+    @include flexbox(column, center, center);
+
+    .orders__phone {
+      @include flexbox(row, center, center);
+
+      .phone__icon {
+        color: $primaryGlobalColor;
+        @include iconOnMobile;
+      }
+    }
+
+    .orders__gofood {
+      height: 56px;
+      width: 120px;
+    }
+
+    .orders__grabfood {
+      @include iconOnMobile;
+    }
   }
 
 

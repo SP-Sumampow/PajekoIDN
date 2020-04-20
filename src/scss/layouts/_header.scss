@@ -1,12 +1,76 @@
 .header {
   height: 8vh;
-  @include flexbox(row, space-between, center);
-  border-bottom: $border;
+  @include flexbox(column, space-between, center);
+  z-index: 100;
 
-  &__logo {
-    justify-self: center;
-    height: 5vh;
-    margin-right: 10px;
+
+  .header__basic{
+    @include flexbox(row, space-between, center);
+    width: 100%;
+    margin-top: 8px;
+    position: relative;
+
+    .basic__logo {
+      height: 5vh;
+      margin-right: 10px;
+  
+    }
+  }
+
+  
+  .header-is-open {
+    height: 60vh;
+    @include flexbox(column, space-around, center);
+
+    .container {
+        position: absolute;
+        z-index: 1;
+
+
+        @include tablet-up {
+            display: none;
+        }
+    }
+
+
+}
+
+  
+
+  .menu {
+    display: none;
+    list-style-type: none;
+    z-index: 88;
+
+    @include tablet-up {
+      @include flexbox(column, space-around,center);
+      padding: 4px 15vw;
+      margin-top: 20px;
+      width: 100vw;
+
+    }
+
+    li {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: auto;
+      border: $border;
+      padding-top: 25px;
+      
+
+
+    }
+  }
+
+  .is-open-menu {
+      @include flexbox(column, space-around, stretch);
+      background-color: white;
+      color: $primaryGlobalColor;
+      text-align: center;
+      font-style: bold;
+      font-weight: 900;
+      height: 50vh;
+      width: 100vw;
   }
 }
 
@@ -15,13 +79,11 @@
   display: inline-block;
   width: 65px;
   cursor: pointer;
-  // position: absolute;
-  // z-index: 1;
 
 
-  // @include tablet-up {
-  //     display: none;
-  // }
+  @include tablet-up {
+      display: none;
+  }
 }
 
 .bar {
@@ -38,16 +100,16 @@
 // }
 
 
-// .is-click .bar:nth-child(1) {
-//   -webkit-transform: rotate(-45deg) translate(-6.5px, 6.5px);
-//   transform: rotate(-45deg) translate(-6.5px, 6.5px);
-// }
+.is-click .bar:nth-child(1) {
+  -webkit-transform: rotate(-45deg) translate(-6.5px, 6.5px);
+  transform: rotate(-45deg) translate(-6.5px, 6.5px);
+}
 
-// .is-click .bar:nth-child(2) {
-//   opacity: 0;
-// }
+.is-click .bar:nth-child(2) {
+  opacity: 0;
+}
 
-// .is-click .bar:nth-child(3) {
-//   -webkit-transform: rotate(45deg) translate(-6.5px, -6.5px);
-//   transform: rotate(45deg) translate(-6.5px, -6.5px);
-// }
+.is-click .bar:nth-child(3) {
+  -webkit-transform: rotate(45deg) translate(-6.5px, -6.5px);
+  transform: rotate(45deg) translate(-6.5px, -6.5px);
+}

@@ -4,23 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="scss/styles.scss">
+  <script defer src="script.js"></script>
   <title>PAJEKO MANADO</title>
 </head>
 <body>
   <header class="header">
-    <div id="container" id="cross" class="container">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
+    <div class="header__basic">
+      <div id="container" id="cross" class="container">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <img class="basic__logo" src="assets/image/pajeko logo fake.svg">
     </div>
-    <img class="header__logo" src="assets/image/pajeko logo fake.svg">
+    <ul class= "menu">
+      <li>beranda</li>
+      <li>menu</li>
+      <li>blogs</li>
+      <li>alamat</li>
+    </ul>
   </header>
-  <ul class= "menu">
-    <li>beranda</li>
-    <li>menu</li>
-    <li>blogs</li>
-    <li>alamat</li>
-  </ul>
   <main class="mainContent">
     <section class="mainContent__hero hero">
       <h1 class="hero__title"> STAY SAFE!</h1>
@@ -39,7 +42,15 @@
       </div>
       <a>Lihat selengkapnya ..</a>
     </section>
-    <section class="mainContent__orders"></section>
+    <section class="mainContent__orders orders">
+      <p class="orders__text">Pemesanan dapat di lakukan <br>melalui :</p>
+      <div class="orders__phone phone">
+        <img class="phone__icon" src="assets/icons/icons8-phone.svg">
+        <h3 class="phone__number"></h3>
+      </div>
+      <img class="orders__gofood" src="assets/icons/iconGoFood.jpg">
+      <img class="orders__grabfood" src="assets/icons/grabfoodicon.png">
+    </section>
   </main>
   <footer class="footer">
     <div class="footer__socialMedias socialMedias">
