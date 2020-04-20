@@ -1,0 +1,23 @@
+
+@import 'global/reset.scss';
+@import 'global/variables.scss';
+@import 'layouts/_header.scss';
+@import 'layouts/_footer.scss';
+@import 'pages/mainPage.scss';
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  width: 100vw;
+
+  overflow: hidden;
+  color: $secondaryTextColor;
+
+  .menu {
+    display: none;
+  }
+}

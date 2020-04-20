@@ -1,0 +1,25 @@
+{
+  "name": "PajekoIDN",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SP-Sumampow/PajekoIDN.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SP-Sumampow/PajekoIDN/issues"
+  },
+  "homepage": "https://github.com/SP-Sumampow/PajekoIDN#readme",
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  }
+}

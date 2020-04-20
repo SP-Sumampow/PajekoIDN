@@ -1,0 +1,53 @@
+.header {
+  height: 8vh;
+  background-color: powderblue;
+  @include flexbox(row, space-between, center);
+
+  &__logo {
+    justify-self: center;
+    height: 5vh;
+    margin-right: 10px;
+  }
+}
+
+.container {
+  @include flexbox(row, space-around, center);
+  display: inline-block;
+  width: 65px;
+  cursor: pointer;
+  // position: absolute;
+  // z-index: 1;
+
+
+  // @include tablet-up {
+  //     display: none;
+  // }
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: $primaryGlobalColor;
+  margin: 6px 0;
+  margin-left: 10px;
+  transition: 0.4s;
+}
+
+// .is-click {
+//   margin-top: 20px;
+// }
+
+
+// .is-click .bar:nth-child(1) {
+//   -webkit-transform: rotate(-45deg) translate(-6.5px, 6.5px);
+//   transform: rotate(-45deg) translate(-6.5px, 6.5px);
+// }
+
+// .is-click .bar:nth-child(2) {
+//   opacity: 0;
+// }
+
+// .is-click .bar:nth-child(3) {
+//   -webkit-transform: rotate(45deg) translate(-6.5px, -6.5px);
+//   transform: rotate(45deg) translate(-6.5px, -6.5px);
+// }

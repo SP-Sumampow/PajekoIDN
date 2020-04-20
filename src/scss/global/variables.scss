@@ -1,0 +1,95 @@
+/************ colors ************/
+
+$primaryTextColor : #000;
+$secondaryTextColor: #F3F3F3;
+$primaryGlobalColor : #023c02;
+$secondaryGlobalColor: #012a01;
+$tertiaryGlobalColor: #023c3c;
+
+//************************* BREAKING POINTS *************************//
+
+$tablet-up: 768px;
+$tablet-down: 767px;
+
+$desktop-up: 1200px;
+$desktop-down: 1199px;
+$desktop-Xlarge: 1668px;
+
+@mixin tablet-up {
+  @media (min-width: $tablet-up) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media (max-width: $tablet-down) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: $desktop-up) {
+    @content;
+  }
+}
+
+@mixin desktop-down {
+  @media (max-width: $desktop-down) {
+    @content;
+  }
+}
+
+@mixin desktop-Xlarge {
+  @media (min-width: $desktop-Xlarge) {
+    @content;
+  }
+}
+
+/************ mixins ************/
+
+@mixin flexbox($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+
+/************ scales ************/
+
+@mixin scale-animation {
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+@mixin scale-animation-medium {
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@mixin scale-animation-icon {
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+
+@mixin scale-animation-text {
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    color: $tertiaryGlobalColor;
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+  }
+}
