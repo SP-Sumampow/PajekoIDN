@@ -1,7 +1,7 @@
 .header {
   height: 8vh;
-  background-color: powderblue;
   @include flexbox(row, space-between, center);
+  border-bottom: $border;
 
   &__logo {
     justify-self: center;

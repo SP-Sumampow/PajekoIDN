@@ -1,4 +1,39 @@
 .mainContent {
-  height: 80vh;
-  width: 100vw;
+  color: $primaryTextColor;
+
+  &__hero {
+    height: 80vh;
+    background-image: url("/assets/image/grilledpicExample.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .hero {
+      position: absolute;
+
+      &__title {
+        color: $secondaryTextColor;
+        font-size: 80px;
+        text-align: center;
+        padding: 120px 0 24px;
+      }
+
+      &__text {
+        color: $secondaryTextColor;
+        font-size: 32px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__aboutUs {
+    height: 100vh;
+    background-color: skyblue;
+  }
+
+  &__orders {
+    height: 100vh;
+    background-color: thistle;
+  }
+
+
 }
