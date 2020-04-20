@@ -26,12 +26,50 @@
   }
 
   &__aboutUs {
-    height: 100vh;
-    background-color: skyblue;
+    height: 90vh;
+    color: $secondaryGlobalColor;
+    
+
+    .aboutUs__picture {
+      height: 50vh;
+      width: 90vw;
+      margin: 8vh 5vw;
+
+    }
+
+    .aboutUs__text {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+
+  &__foodMenu {
+    height: 80vh;
+    color: $secondaryGlobalColor;
+    @include flexbox(column, space-around, center);
+
+    .foodMenu__title {
+      font-size: 48px;
+      text-align: center;
+    }
+
+    .boxMenu{
+      border: $border;
+      height: 50vh;
+      width: 90vw;
+      //margin: 8vh 5vw;
+      @include flexbox(column, space-around, center);
+      
+      &__picture {
+        height: 80%;
+        width: 90%;
+      }
+
+    }
   }
 
   &__orders {
-    height: 100vh;
+    height: 50vh;
     background-color: thistle;
   }
 
