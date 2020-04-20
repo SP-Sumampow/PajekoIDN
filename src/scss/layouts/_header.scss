@@ -3,6 +3,10 @@
   @include flexbox(column, space-between, center);
   z-index: 100;
 
+  @include desktop-up {
+    @include flexbox(row, flex-start, center)
+  }
+
 
   .header__basic{
     @include flexbox(row, space-between, center);
@@ -37,25 +41,37 @@
 
   
 
-  .menu {
+  ul.menu {
     display: none;
     list-style-type: none;
     z-index: 88;
+    color: $primaryGlobalColor;
 
-    @include tablet-up {
-      @include flexbox(column, space-around,center);
-      padding: 4px 15vw;
-      margin-top: 20px;
+    @include desktop-up {
+      @include flexbox(row, space-between, center);
+      // padding: 4px 15vw;
+      // margin-top: 20px;
       width: 100vw;
 
     }
 
     li {
+      width: 100%;
       flex-grow: 1;
       flex-shrink: 1;
       flex-basis: auto;
       border: $border;
       padding-top: 25px;
+      text-align: center;
+
+
+      @include tablet-up{
+        border: none;
+      }
+
+      @include desktop-up {
+        padding-top: 0;
+      }
       
 
 
