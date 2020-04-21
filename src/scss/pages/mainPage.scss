@@ -28,12 +28,22 @@
   &__aboutUs {
     height: 90vh;
     color: $secondaryGlobalColor;
+
+    @include tablet-up {
+      @include flexbox(row, space-around, center);
+      margin: 40px 80px;
+    }
     
 
     .aboutUs__picture {
       height: 50vh;
       width: 90vw;
       margin: 8vh 5vw;
+
+      @include tablet-up {
+        height: 500px;
+        width: 500px;
+      }
 
     }
 
@@ -44,13 +54,24 @@
   }
 
   &__foodMenu {
-    height: 80vh;
+    height: 100vh;
     color: $secondaryGlobalColor;
     @include flexbox(column, space-around, center);
+
+    
 
     .foodMenu__title {
       font-size: 48px;
       text-align: center;
+    }
+
+    .foodMenu__allMenu {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      margin: 40px 80px;
     }
 
     .boxMenu{
@@ -59,12 +80,71 @@
       width: 90vw;
       //margin: 8vh 5vw;
       @include flexbox(column, space-around, center);
+
+      @include desktop-up {
+        width: 360px;
+        height: 260px;
+        @include flexbox(row, space-between, flex-end);
+        margin-top: 24px;
+
+      &:hover {
+        border: 2px solid $primaryGlobalColor;
+    }
+      }
       
       &__picture {
         height: 80%;
         width: 90%;
       }
 
+    }
+
+    .allMenu__box {
+      display: none;
+
+      @include desktop-up {
+        @include flexbox(column, center, center);
+      }
+    }
+
+    .allMenu__box2 {
+      display: none;
+
+      @include desktop-up {
+        @include flexbox(column, center, center);
+      }
+    }
+
+    .allMenu__box3 {
+      display: none;
+
+      @include desktop-up {
+        @include flexbox(column, center, center);
+      }
+    }
+
+    .allMenu__box4 {
+      display: none;
+
+      @include desktop-up {
+        @include flexbox(column, center, center);
+      }
+    }
+
+    .allMenu__box5 {
+      display: none;
+
+      @include desktop-up {
+        @include flexbox(column, center, center);
+      }
+    }
+
+    .allMenu__box6 {
+      display: none;
+
+      @include desktop-up {
+        @include flexbox(column, center, center);
+      }
     }
   }
 
